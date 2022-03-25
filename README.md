@@ -34,7 +34,7 @@ API:
 
 ## Meta
 
-Christian Schou – [My tech blog](https://christian-schou.dk/). Feel free to connect with me on [LinkedIn](www.linkedin.com/in/chrschou1996) as well.
+Christian Schou – [My tech blog](https://christian-schou.dk/). Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/chrschou1996) as well.
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
