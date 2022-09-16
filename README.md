@@ -3,6 +3,25 @@
 
 You can find the fill guide on how this API was made with detailed instructions for configuration of Azure + API here: [How to use Azure Blob Storage in an ASP.NET Core Web API to list, upload, download, and delete files](https://christian-schou.dk/how-to-use-azure-blob-storage-with-asp-net-core/).
 
+## Development Setup (Docker)
+
+1. Clone project to local machine
+2. Open solution file 
+3. Choose to start the `docker-compose` launch settings
+
+N'joy :-)
+
+The above steps will start [Azurite storage emulator](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azurite?tabs=visual-studio), 
+[Seq](https://datalust.co/seq) log server and the API. The services will be started by
+the definitions in the docker-compose.yml file
+
+All Docker container logs will also be sent to the Seq log server.
+
+To see all logs, open http://localhost:5341/
+
+Running Docker requires that you have installed [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/).
+
+
 ## Development Setup
 
 Azure:
