@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "azureblobstorage.webapi",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
+      "serviceActions": {
+        "azureblobstorage.webapi": "StartDebugging",
+        "azurite": "StartWithoutDebugging",
+        "seq": "StartWithoutDebugging",
+        "seq-input-gelf": "StartWithoutDebugging"
+      }
+    }
+  }
+}
