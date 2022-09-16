@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureBlobStorage.WebApi", "AzureBlobStorageWebApi\AzureBlobStorage.WebApi.csproj", "{F284D2E3-D02D-45BF-BF06-444EC236BCB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureBlobStorage.Test", "AzureBlobStorage.Test\AzureBlobStorage.Test.csproj", "{BDF25E77-8A55-4449-80EE-06E5866530DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureBlobStorage.Test", "AzureBlobStorage.Test\AzureBlobStorage.Test.csproj", "{BDF25E77-8A55-4449-80EE-06E5866530DC}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9DCFE125-6311-45BF-9B89-B5B808C6C52F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BDF25E77-8A55-4449-80EE-06E5866530DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDF25E77-8A55-4449-80EE-06E5866530DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDF25E77-8A55-4449-80EE-06E5866530DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DCFE125-6311-45BF-9B89-B5B808C6C52F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DCFE125-6311-45BF-9B89-B5B808C6C52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DCFE125-6311-45BF-9B89-B5B808C6C52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DCFE125-6311-45BF-9B89-B5B808C6C52F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
