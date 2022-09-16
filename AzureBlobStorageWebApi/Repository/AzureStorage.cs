@@ -116,9 +116,14 @@ namespace AzureBlobStorage.WebApi.Repository
             // Create new upload response object that we can return to the requesting method
             BlobResponseDto response = new();
 
+
+
             // Get a reference to a container named in appsettings.json and then create it
             BlobContainerClient container = new BlobContainerClient(_storageConnectionString, _storageContainerName);
-            //await container.CreateAsync();
+
+            // Create the container if it does not exist
+            await container.CreateIfNotExistsAsync();
+
             try
             {
                 // Get a reference to the blob just uploaded from the API in a container from configuration settings

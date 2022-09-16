@@ -14,6 +14,7 @@ try
     builder.Host.UseSerilog((_, config) =>
     {
         config.WriteTo.Console()
+        .WriteTo.Seq(serverUrl: "http://seq:5341")
         .ReadFrom.Configuration(builder.Configuration);
     });
 

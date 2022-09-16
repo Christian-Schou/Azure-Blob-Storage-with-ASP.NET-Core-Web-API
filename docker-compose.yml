@@ -1,0 +1,52 @@
+version: '3.4'
+
+x-logging:
+      &default-logging
+      driver: gelf
+      options:
+        gelf-address: udp://0.0.0.0:12201/udp
+
+
+services:
+  seq:
+    image: datalust/seq
+    ports:
+      - 5341:80
+    environment:
+      -  ACCEPT_EULA=Y
+    volumes:
+      - seq_data:/data
+
+  seq-input-gelf:
+    image: datalust/seq-input-gelf:latest
+    depends_on:
+      - seq
+    ports:
+      - 12201:12201/udp
+    environment:
+      - SEQ_ADDRESS=http://seq:5341
+      - GELF_ENABLE_DIAGNOSTICS=False
+
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite
+    ports:
+        - 10000:10000
+        - 10001:10001
+        - 10002:10002
+    volumes:
+        - azurite_data:/data
+    logging: *default-logging
+
+  azureblobstorage.webapi:
+    image: ${DOCKER_REGISTRY-}azureblobstoragewebapi
+    depends_on:
+        - seq
+        - azurite
+
+    build:
+      context: .
+      dockerfile: AzureBlobStorageWebApi/Dockerfile
+
+volumes:
+  azurite_data:
+  seq_data:
